@@ -22,6 +22,7 @@ module.exports = function (grunt) {
                 }]
             }
         },
+        
         watch: {
             scripts: {
                 files: ['sass/*.sass'],
@@ -41,22 +42,20 @@ module.exports = function (grunt) {
                     ]
                 },
                 options: {
-                watchTask: true,
-                server: {
-                baseDir: "./"
+                    watchTask: true,
+                    server: {
+                        baseDir: "./"
+                    }
+                }
             }
         }
-    }
-}
-        
-        
-        
     });
+
     // Load the plugins tasks 
     grunt.loadNpmTasks('grunt-sass');
     grunt.loadNpmTasks('grunt-contrib-imagemin');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-browser-sync');
     // Default task(s).
-    grunt.registerTask('default', ['browserSync','watch','imagemin']);
+    grunt.registerTask('default', ['sass', 'browserSync','watch','imagemin']);
 };
