@@ -11,7 +11,7 @@ $siteMaxWidth: 1200px
 $white: white
 $black: #000
 $medium-gray: #A9A9A9
-$aqua: #00C7E8
+$aqua: blue
 
 //Backgrounds
 $gray-copyright: #252726
@@ -120,19 +120,6 @@ nav
         list-style-type: none
         float: right
 
-        > li
-            display: inline-block
-            box-sizing: border-box
-            position: relative
-            text-align: center
-
-            > a
-                display: inline-block
-                padding: 0 20px
-                line-height: 50px
-
-                &:hover
-                    color: $aqua
 
 input[type="checkbox"] + label
     font-size: 18px
@@ -176,26 +163,6 @@ label
 
 // SECTION ICONS
 // ICON CONTAINER
-.icons-container
-    padding: 0 5%
-    font-family: $verdana
-
-    .fa
-        border: none
-        color: $white
-        //akapit
-    p
-        color: $medium-gray
-        font-size: 12px
-
-    h4
-        text-transform: uppercase
-        font-size: 18px
-
-.icon-research,
-.icon-work-and-work
-    background: #313332
-
 
     
 .icon-fully
@@ -225,28 +192,6 @@ label
 .galeria img
     display: block
 
-.fa-camera-retro,
-.fa-search
-    position: absolute
-    height: 36px
-    top: 0
-    bottom: 0
-    margin: auto
-
-//it fixes location in the picture
-.fa-camera-retro
-    left: 35%
-    padding-top: 6px
-
-.fa-search
-    right: 35%
-
-// EXAMPLE
-// This way we can control type of the animation, its duration and compability is provided as well.
-@mixin animacja($czas: 1s, $typ: ease)  
-    -moz-transition: all $czas $typ
-    -webkit-transition: all $czas $typ
-    transition: all $czas $typ
 
 
 /** WARTSTWA PRZY ANIMACJI
@@ -286,16 +231,7 @@ label
     border-radius:  $radius
 
 
-    
-.member,
-.secretary
-    background-image: url("http://s1.fotowrzut.pl/HX655OU6Y9/1.jpg")
-    background-position: center center
-    width: 130px
-    height: 130px
-    margin: 0 auto
-    @include radius(50%)
-    position: relative
+
     
 .secretary::after
     content: "Secretary"
